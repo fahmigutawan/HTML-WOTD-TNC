@@ -4,149 +4,326 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Syarat dan Ketentuan & Privacy Policy</title>
+    <title>Syarat dan Ketentuan & Privacy Policy - Islamind</title>
     <meta
       name="description"
       content="Term and Condition & Privacy Policy WOTD"
     />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px 0;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .header p {
+        font-size: 1.1rem;
+        color: #7f8c8d;
+      }
+
+      .sections-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .section {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .section-title {
+        font-size: 2rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        text-align: center;
+        padding-bottom: 15px;
+        border-bottom: 3px solid #3498db;
+        position: relative;
+      }
+
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: #e74c3c;
+        border-radius: 2px;
+      }
+
+      .section h2 {
+        color: #2980b9;
+        font-size: 1.3rem;
+        margin: 25px 0 15px 0;
+        padding-left: 10px;
+        border-left: 4px solid #3498db;
+      }
+
+      .section h3 {
+        color: #27ae60;
+        font-size: 1.2rem;
+        margin: 20px 0 12px 0;
+      }
+
+      .section h4 {
+        color: #8e44ad;
+        font-size: 1.1rem;
+        margin: 15px 0 10px 0;
+      }
+
+      .section p {
+        margin-bottom: 15px;
+        text-align: justify;
+        color: #2c3e50;
+        line-height: 1.7;
+      }
+
+      .section ul {
+        margin: 15px 0;
+        padding-left: 25px;
+      }
+
+      .section li {
+        margin-bottom: 8px;
+        color: #34495e;
+        line-height: 1.6;
+      }
+
+      .section strong {
+        color: #2c3e50;
+        font-weight: 600;
+      }
+
+      .contact-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        margin-top: 30px;
+      }
+
+      .contact-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        border: none;
+        padding: 0;
+      }
+
+      .contact-section a {
+        color: #fff;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        margin-top: 10px;
+        transition: background 0.3s ease;
+      }
+
+      .contact-section a:hover {
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .sections-container {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .header h1 {
+          font-size: 2rem;
+        }
+
+        .section {
+          padding: 20px;
+        }
+
+        .section-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, #3498db, #e74c3c);
+        transform-origin: left;
+        transform: scaleX(0);
+        transition: transform 0.1s ease;
+        z-index: 1000;
+      }
+    </style>
   </head>
   <body>
-    <h1>Syarat dan Ketentuan</h1>
-    <p>Terakhir diperbarui pada 29 Agustus 2025</p>
+    <div class="scroll-indicator" id="scrollIndicator"></div>
 
-    <h2>1. Pengenalan</h2>
-    <p>Selamat datang di Islamind! Dengan menggunakan aplikasi kami, Anda setuju untuk mematuhi dan terikat oleh Syarat dan Ketentuan berikut. Jika Anda tidak setuju dengan bagian mana pun dari syarat ini, harap jangan menggunakan aplikasi kami.</p>
+    <div class="container">
+      <div class="header">
+        <h1>Syarat & Ketentuan + Kebijakan Privasi</h1>
+        <p>Islamind - Terakhir diperbarui pada 29 Agustus 2025</p>
+      </div>
 
-    <h2>2. Penggunaan Aplikasi</h2>
-    <p><strong>2.1. Akses dan Penggunaan:</strong> Anda diberikan lisensi non-eksklusif, tidak dapat dipindahtangankan, untuk mengakses dan menggunakan aplikasi sesuai dengan syarat ini.</p>
-    <p><strong>2.2. Kelayakan:</strong> Pengguna merupakan orang berusia minimal 13 tahun.</p>
-    <p><strong>2.3. Akun Pengguna:</strong> Sebagai pengguna akhir, Anda diharuskan memiliki akun untuk dapat mengakses layanan secara penuh</p>
+      <div class="sections-container">
+        <!-- Syarat dan Ketentuan Section -->
+        <div class="section">
+          <h1 class="section-title">Syarat dan Ketentuan</h1>
 
-    <h2>3. Konten</h2>
-    <p><strong>3.1. Konten Pengguna:</strong> Anda bertanggung jawab penuh atas konten yang Anda unggah atau bagikan melalui aplikasi. Anda setuju untuk tidak mengunggah konten yang melanggar hak kekayaan intelektual pihak ketiga atau konten yang dianggap tidak pantas.</p>
-    <p><strong>3.2. Hak untuk Menghapus:</strong> Kami berhak, tetapi tidak berkewajiban, untuk menghapus atau menonaktifkan konten yang melanggar syarat ini atau dianggap tidak pantas.</p>
+          <h2>1. Pengenalan</h2>
+          <p>Selamat datang di Islamind! Dengan menggunakan aplikasi kami, Anda setuju untuk mematuhi dan terikat oleh Syarat dan Ketentuan berikut. Jika Anda tidak setuju dengan bagian mana pun dari syarat ini, harap jangan menggunakan aplikasi kami.</p>
 
-    <h2>4. Hak Kekayaan Intelektual</h2>
-    <p><strong>4.1. Kepemilikan:</strong> Semua hak cipta, merek dagang, dan hak kekayaan intelektual lainnya dalam aplikasi dan kontennya (tidak termasuk konten pengguna) adalah milik kami atau pemberi lisensi kami.</p>
-    <p><strong>4.2. Penggunaan Terbatas:</strong> Anda tidak boleh menyalin, memodifikasi, mendistribusikan, menjual, atau menyewakan bagian mana pun dari aplikasi tanpa izin tertulis dari kami.</p>
+          <h2>2. Penggunaan Aplikasi</h2>
+          <p><strong>2.1. Akses dan Penggunaan:</strong> Anda diberikan lisensi non-eksklusif, tidak dapat dipindahtangankan, untuk mengakses dan menggunakan aplikasi sesuai dengan syarat ini.</p>
+          <p><strong>2.2. Kelayakan:</strong> Pengguna merupakan orang berusia minimal 13 tahun.</p>
+          <p><strong>2.3. Akun Pengguna:</strong> Sebagai pengguna akhir, Anda diharuskan memiliki akun untuk dapat mengakses layanan secara penuh</p>
 
-    <h2>5. Pembatasan Tanggung Jawab</h2>
-    <p><strong>5.1. Penggunaan Aplikasi:</strong> Anda menggunakan aplikasi atas risiko Anda sendiri. Aplikasi ini disediakan "sebagaimana adanya" dan "sebagaimana tersedia" tanpa jaminan apa pun, baik tersurat maupun tersirat.</p>
-    <p><strong>5.2. Kerugian:</strong> Kami tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan aplikasi atau ketidakmampuan untuk mengakses aplikasi.</p>
+          <h2>3. Konten</h2>
+          <p><strong>3.1. Konten Pengguna:</strong> Anda bertanggung jawab penuh atas konten yang Anda unggah atau bagikan melalui aplikasi. Anda setuju untuk tidak mengunggah konten yang melanggar hak kekayaan intelektual pihak ketiga atau konten yang dianggap tidak pantas.</p>
+          <p><strong>3.2. Hak untuk Menghapus:</strong> Kami berhak, tetapi tidak berkewajiban, untuk menghapus atau menonaktifkan konten yang melanggar syarat ini atau dianggap tidak pantas.</p>
 
-    <h2>6. Perubahan Syarat dan Ketentuan</h2>
-    <p><strong>6.1. Perubahan:</strong> Kami berhak untuk mengubah syarat dan ketentuan ini kapan saja. Perubahan akan berlaku setelah diposting di aplikasi. Penggunaan aplikasi yang berkelanjutan setelah perubahan berarti Anda menerima perubahan tersebut.</p>
+          <h2>4. Hak Kekayaan Intelektual</h2>
+          <p><strong>4.1. Kepemilikan:</strong> Semua hak cipta, merek dagang, dan hak kekayaan intelektual lainnya dalam aplikasi dan kontennya (tidak termasuk konten pengguna) adalah milik kami atau pemberi lisensi kami.</p>
+          <p><strong>4.2. Penggunaan Terbatas:</strong> Anda tidak boleh menyalin, memodifikasi, mendistribusikan, menjual, atau menyewakan bagian mana pun dari aplikasi tanpa izin tertulis dari kami.</p>
 
-    <h2>7. Hukum yang Berlaku</h2>
-    <p><strong>7.1. Hukum:</strong> Syarat dan ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Indonesia.</p>
+          <h2>5. Pembatasan Tanggung Jawab</h2>
+          <p><strong>5.1. Penggunaan Aplikasi:</strong> Anda menggunakan aplikasi atas risiko Anda sendiri. Aplikasi ini disediakan "sebagaimana adanya" dan "sebagaimana tersedia" tanpa jaminan apa pun, baik tersurat maupun tersirat.</p>
+          <p><strong>5.2. Kerugian:</strong> Kami tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan aplikasi atau ketidakmampuan untuk mengakses aplikasi.</p>
 
-    <h2>8. Kontak</h2>
-    <p><strong>8.1. Informasi Kontak:</strong> Jika Anda memiliki pertanyaan atau kekhawatiran tentang syarat dan ketentuan ini, silakan hubungi kami di fahmigutawan@gmail.com.</p>
+          <h2>6. Perubahan Syarat dan Ketentuan</h2>
+          <p><strong>6.1. Perubahan:</strong> Kami berhak untuk mengubah syarat dan ketentuan ini kapan saja. Perubahan akan berlaku setelah diposting di aplikasi. Penggunaan aplikasi yang berkelanjutan setelah perubahan berarti Anda menerima perubahan tersebut.</p>
 
-    <h1>Kebijakan Privasi</h1>
-    <p>Terakhir diperbarui: 29 Agustus 2025</p>
+          <h2>7. Hukum yang Berlaku</h2>
+          <p><strong>7.1. Hukum:</strong> Syarat dan ketentuan ini diatur oleh dan ditafsirkan sesuai dengan hukum Indonesia.</p>
+        </div>
 
-    <h2>Definisi</h2>
-    <p>Beberapa Istilah Pada Kebijakan Privasi ini:</p>
+        <!-- Privacy Policy Section -->
+        <div class="section">
+          <h1 class="section-title">Kebijakan Privasi</h1>
 
-    <ul>
-      <li>
-        <strong>Akun:</strong> Akun unik yang dibuat untuk Anda untuk mengakses Layanan kami atau bagian dari Layanan kami.
-      </li>
-      <li>
-        <strong>Aplikasi:</strong> Merujuk pada Islamind, program perangkat lunak yang disediakan oleh Perusahaan.
-      </li>
-      <li>
-        <strong>Perusahaan:</strong> Merujuk pada Islamind, yang disebut sebagai "Perusahaan", "Kami", "Kita", atau "Milik Kami" dalam perjanjian ini.
-      </li>
-      <li>
-        <strong>Negara:</strong> Indonesia.
-      </li>
-      <li>
-        <strong>Perangkat:</strong> Perangkat apa pun yang dapat mengakses Layanan, seperti komputer, ponsel, atau tablet digital.
-      </li>
-      <li>
-        <strong>Data Pribadi:</strong> Informasi apa pun yang berkaitan dengan individu yang teridentifikasi atau dapat diidentifikasi.
-      </li>
-      <li>
-        <strong>Layanan:</strong> Merujuk pada Aplikasi.
-      </li>
-      <li>
-        <strong>Penyedia Layanan:</strong> Orang atau badan hukum yang memproses data atas nama Perusahaan. Ini merujuk pada perusahaan atau individu pihak ketiga yang dipekerjakan oleh Perusahaan untuk memfasilitasi Layanan, menyediakan Layanan atas nama Perusahaan, melakukan layanan terkait Layanan, atau membantu Perusahaan dalam menganalisis bagaimana Layanan digunakan.
-      </li>
-      <li>
-        <strong>Data Penggunaan:</strong> Data yang dikumpulkan secara otomatis, baik yang dihasilkan dari penggunaan Layanan atau dari infrastruktur Layanan itu sendiri (misalnya, durasi kunjungan halaman).
-      </li>
-      <li>
-        <strong>Anda:</strong> Individu yang mengakses atau menggunakan Layanan, atau perusahaan, atau badan hukum lain atas nama siapa individu tersebut mengakses atau menggunakan Layanan, yang berlaku.
-      </li>
-    </ul>
+          <h2>Definisi</h2>
+          <p>Beberapa Istilah Pada Kebijakan Privasi ini:</p>
+          <ul>
+            <li><strong>Akun:</strong> Akun unik yang dibuat untuk Anda untuk mengakses Layanan kami atau bagian dari Layanan kami.</li>
+            <li><strong>Aplikasi:</strong> Merujuk pada Islamind, program perangkat lunak yang disediakan oleh Perusahaan.</li>
+            <li><strong>Perusahaan:</strong> Merujuk pada Islamind, yang disebut sebagai "Perusahaan", "Kami", "Kita", atau "Milik Kami" dalam perjanjian ini.</li>
+            <li><strong>Data Pribadi:</strong> Informasi apa pun yang berkaitan dengan individu yang teridentifikasi atau dapat diidentifikasi.</li>
+            <li><strong>Layanan:</strong> Merujuk pada Aplikasi.</li>
+          </ul>
 
-    <h2>Mengumpulkan dan Menggunakan Data Pribadi Anda</h2>
+          <h2>Mengumpulkan dan Menggunakan Data Pribadi Anda</h2>
 
-    <h3>Jenis Data yang Dikumpulkan</h3>
+          <h3>Jenis Data yang Dikumpulkan</h3>
+          <h4>Data Pribadi</h4>
+          <p>Saat menggunakan Layanan kami, Kami mungkin meminta Anda untuk memberikan informasi pribadi tertentu yang dapat digunakan untuk menghubungi atau mengidentifikasi Anda. Informasi yang dapat diidentifikasi secara pribadi mungkin termasuk, tetapi tidak terbatas pada:</p>
+          <ul>
+            <li>Alamat email</li>
+            <li>Nama Lengkap</li>
+            <li>Alamat, Provinsi, Kode Pos, Kota</li>
+            <li>Data Penggunaan</li>
+          </ul>
 
-    <h4>Data Pribadi</h4>
-    <p>Saat menggunakan Layanan kami, Kami mungkin meminta Anda untuk memberikan informasi pribadi tertentu yang dapat digunakan untuk menghubungi atau mengidentifikasi Anda. Informasi yang dapat diidentifikasi secara pribadi mungkin termasuk, tetapi tidak terbatas pada:</p>
-    <ul>
-      <li>Alamat email</li>
-      <li>Nama Lengkap</li>
-      <li>Alamat, Provinsi, Kode Pos, Kota</li>
-      <li>Data Penggunaan</li>
-    </ul>
+          <h3>Penggunaan Data Pribadi Anda</h3>
+          <p>Perusahaan dapat menggunakan Data Pribadi untuk tujuan berikut:</p>
+          <ul>
+            <li><strong>Untuk mengelola Akun Anda:</strong> Untuk mengelola pendaftaran Anda sebagai pengguna Layanan.</li>
+            <li><strong>Untuk pelaksanaan kontrak:</strong> Pengembangan, kepatuhan, dan pelaksanaan kontrak pembelian produk, barang, atau layanan.</li>
+            <li><strong>Untuk menghubungi Anda:</strong> Menghubungi Anda melalui email, panggilan telepon, SMS, atau bentuk komunikasi elektronik lainnya.</li>
+          </ul>
+          <p>Kami tidak berniat membagikan data pribadi anda, kecuali apapun yang memang harus ditampilkan di dalam aplikasi Islamind.</p>
 
-    <h3>Penggunaan Data Pribadi Anda</h3>
-    <p>Perusahaan dapat menggunakan Data Pribadi untuk tujuan berikut:</p>
-    <ul>
-      <li><strong>Untuk mengelola Akun Anda:</strong> Untuk mengelola pendaftaran Anda sebagai pengguna Layanan. Data Pribadi yang Anda berikan dapat memberi Anda akses ke berbagai fungsi Layanan yang tersedia untuk Anda sebagai pengguna terdaftar.</li>
-      <li><strong>Untuk pelaksanaan kontrak:</strong> Pengembangan, kepatuhan, dan pelaksanaan kontrak pembelian produk, barang, atau layanan yang telah Anda beli atau kontrak lain dengan Kami melalui Layanan.</li>
-      <li><strong>Untuk menghubungi Anda:</strong> Menghubungi Anda melalui email, panggilan telepon, SMS, atau bentuk komunikasi elektronik lainnya, seperti pemberitahuan push aplikasi seluler mengenai pembaruan atau komunikasi informatif terkait dengan fungsi, produk, atau layanan yang dikontrak, termasuk pembaruan keamanan, bila perlu atau masuk akal untuk penerapannya.</li>
-    </ul>
+          <h3>Retensi Data Pribadi Anda</h3>
+          <p>Perusahaan akan menyimpan Data Pribadi Anda hanya selama diperlukan untuk tujuan yang diuraikan dalam Kebijakan Privasi ini.</p>
 
-    <p>Kami tidak berniat membagikan data pribadi anda, kecuali apapun yang memang harus ditampilkan di dalam aplikasi Islamind.</p>
+          <h3>Transfer Data Pribadi Anda</h3>
+          <p>Informasi Anda, termasuk Data Pribadi, diproses di kantor operasional Perusahaan dan tempat lain di mana pihak-pihak yang terlibat dalam pemrosesan berada.</p>
 
-    <h3>Retensi Data Pribadi Anda</h3>
-    <p>Perusahaan akan menyimpan Data Pribadi Anda hanya selama diperlukan untuk tujuan yang diuraikan dalam Kebijakan Privasi ini. Kami akan menyimpan dan menggunakan Data Pribadi Anda sejauh yang diperlukan untuk mematuhi kewajiban hukum Kami (misalnya, jika Kami diwajibkan untuk menyimpan data Anda sesuai dengan hukum yang berlaku), menyelesaikan perselisihan, dan menegakkan perjanjian hukum dan kebijakan kami.</p>
+          <h3>Hapus Data Pribadi Anda</h3>
+          <p>Anda memiliki hak untuk meminta agar Kami membantu menghapus Data Pribadi yang telah Kami kumpulkan tentang Anda.</p>
 
-    <h3>Transfer Data Pribadi Anda</h3>
-    <p>Informasi Anda, termasuk Data Pribadi, diproses di kantor operasional Perusahaan dan tempat lain di mana pihak-pihak yang terlibat dalam pemrosesan berada. Ini berarti bahwa informasi ini dapat ditransfer ke — dan disimpan di — komputer yang berada di luar negara bagian, provinsi, negara, atau yurisdiksi pemerintah lain di mana undang-undang perlindungan data mungkin berbeda dari yurisdiksi Anda.</p>
-    <p>Perusahaan akan mengambil semua langkah yang diperlukan secara wajar untuk memastikan bahwa data Anda diperlakukan dengan aman dan sesuai dengan Kebijakan Privasi ini dan tidak ada transfer Data Pribadi Anda akan terjadi ke organisasi atau negara kecuali ada kontrol yang memadai termasuk keamanan data Anda dan informasi pribadi lainnya.</p>
+          <h3>Keamanan Data Pribadi Anda</h3>
+          <p>Keamanan Data Pribadi Anda penting bagi Kami, tetapi ingat bahwa tidak ada metode transmisi melalui Internet yang 100% aman.</p>
 
-    <h3>Hapus Data Pribadi Anda</h3>
-    <p>Anda memiliki hak untuk meminta agar Kami membantu menghapus Data Pribadi yang telah Kami kumpulkan tentang Anda. Layanan Kami saat ini belum memberi Anda kemampuan untuk menghapus informasi tertentu tentang Anda dari dalam Layanan.</p>
+          <h3>Privasi Anak-Anak</h3>
+          <p>Layanan Kami ditujukan kepada siapa pun dengan usia di atas 13 tahun. Jika Anda adalah orang tua atau wali dan menyadari bahwa Anak Anda telah memberikan Data Pribadi, silakan hubungi Kami.</p>
 
-    <h3>Pengungkapan Data Pribadi Anda</h3>
-    <p>Kami dapat mengungkapkan Data Pribadi Anda dalam situasi tertentu:</p>
-    <ul>
-      <li>Untuk transaksi bisnis seperti merger, penjualan aset Perusahaan, atau restrukturisasi lainnya.</li>
-      <li>Untuk mematuhi kewajiban hukum atau perintah pengadilan.</li>
-      <li>Untuk melindungi dan membela hak atau properti Perusahaan.</li>
-      <li>Untuk mencegah atau menyelidiki potensi pelanggaran terkait Layanan.</li>
-      <li>Untuk melindungi keselamatan pribadi pengguna Layanan atau masyarakat.</li>
-      <li>Untuk melindungi terhadap tanggung jawab hukum.</li>
-    </ul>
+          <h3>Perubahan Kebijakan Privasi</h3>
+          <p>Kami dapat memperbarui Kebijakan Privasi Kami dari waktu ke waktu. Perubahan akan berlaku saat diposting di halaman ini.</p>
+        </div>
+      </div>
 
-    <h3>Keamanan Data Pribadi Anda</h3>
-    <p>Keamanan Data Pribadi Anda penting bagi Kami, tetapi ingat bahwa tidak ada metode transmisi melalui Internet, atau metode penyimpanan elektronik yang 100% aman. Sementara Kami berusaha untuk menggunakan cara yang dapat diterima secara komersial untuk melindungi Data Pribadi Anda, Kami tidak dapat menjamin keamanan absolutnya.</p>
+      <!-- Contact Section -->
+      <div class="contact-section">
+        <h2>Hubungi Kami</h2>
+        <p>Jika Anda memiliki pertanyaan tentang Syarat & Ketentuan atau Kebijakan Privasi ini:</p>
+        <a href="mailto:fahmigutawan@gmail.com">fahmigutawan@gmail.com</a>
+      </div>
+    </div>
 
-    <h3>Privasi Anak-Anak</h3>
-    <p>Layanan Kami ditujukan kepada siapa pun dengan usia di atas 13 tahun. Jika Anda adalah orang tua atau wali dan Anda menyadari bahwa Anak Anda telah memberikan Kami Data Pribadi secara sengaja maupun tidak sengaja, silakan hubungi Kami. Jika kami menemukan fakta bahwa pengguna adalah berusia di bawah atau sama dengan 13 tahun, kami akan mengambil langkah-langkah untuk menghapus informasi akun tersebut dari server Kami.</p>
+    <script>
+      // Scroll indicator
+      window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        document.getElementById('scrollIndicator').style.transform = `scaleX(${scrolled / 100})`;
+      });
 
-    <h3>Tautan ke Situs Web Lain</h3>
-    <p>Layanan Kami mungkin berisi tautan ke situs web lain yang tidak dioperasikan oleh Kami. Jika Anda mengklik tautan pihak ketiga, Anda akan diarahkan ke situs pihak ketiga tersebut. Kami sangat menyarankan Anda untuk meninjau Kebijakan Privasi dari setiap situs yang Anda kunjungi. Kami tidak memiliki kendali atas dan tidak bertanggung jawab atas konten, kebijakan privasi, atau praktik dari situs atau layanan pihak ketiga mana pun.</p>
-
-    <h3>Perubahan pada Kebijakan Privasi ini</h3>
-    <p>Kami dapat memperbarui Kebijakan Privasi Kami dari waktu ke waktu. Kami akan memberi tahu Anda tentang setiap perubahan dengan memposting Kebijakan Privasi baru di halaman ini dan memperbarui tanggal "Terakhir diperbarui" di bagian atas Kebijakan Privasi ini.</p>
-    <p>Anda disarankan untuk meninjau Kebijakan Privasi ini secara berkala untuk setiap perubahan. Perubahan pada Kebijakan Privasi ini berlaku saat diposting di halaman ini.</p>
-
-    <h3>Hubungi Kami</h3>
-    <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, Anda dapat menghubungi kami:</p>
-    <ul>
-      <li>Melalui email: fahmigutawan@gmail.com</li>
-    </ul>
+      // Smooth scroll behavior for sections
+      document.querySelectorAll('.section').forEach(section => {
+        section.addEventListener('mouseenter', () => {
+          section.style.transform = 'translateY(-5px) scale(1.02)';
+        });
+        
+        section.addEventListener('mouseleave', () => {
+          section.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+    </script>
   </body>
 </html>
